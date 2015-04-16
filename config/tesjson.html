@@ -1,0 +1,36 @@
+</p>
+<table class="mGrid" id="jsondata">
+<thead>
+<th>ID</th>
+<th>Title</th>
+<th>Address</th>
+<th>Photo</th>
+<th>Description</th>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+var url="getjson.php";
+$("#jsondata tbody").html("");
+$.getJSON(url,function(data){
+$.each(data.locations, function(i,locations){
+var newRow =
+"<tr>"
++"<td>"+locations.id_location+"</td>"
++"<td>"+locations.title+"</td>"
++"<td>"+locations.address+"</td>"
++"<td>"+locations.photo+"</td>"
++"<td>"+locations.description+"</td>"
++"</tr>" ;
+$(newRow).appendTo("#jsondata tbody");
+});
+});
+});
+
+</script>
+<p style="text-align: justify;">
+<p style="text-align: justify;">
