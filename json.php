@@ -1,6 +1,6 @@
 <?php
     //Create Database connection
-    $db = mysql_connect("localhost","root","");
+    $db = mysql_connect("localhost","muflih","fairuz.el");
     if (!$db) {
         die('Could not connect to db: ' . mysql_error());
     }
